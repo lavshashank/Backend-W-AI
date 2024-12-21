@@ -182,6 +182,3 @@ def video_feed(file_path):
     response = Response(generate_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
     response.call_on_close(cleanup_uploads_folder)
     return response
-
-if __name__ == '__main__':
-    app.run()
